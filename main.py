@@ -27,8 +27,6 @@ def reset_timer():
     check_label.config(text=check)
 
 
-
-
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 
 def start_timer():
