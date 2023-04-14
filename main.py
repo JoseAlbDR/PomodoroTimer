@@ -31,14 +31,14 @@ def start_timer():
               2: [long_break_sec, "Long Break", RED]}
 
     # Choosing timer
-    n = reps % 2
+    work_sessions = reps % 2
     if reps == 8:
-        n = 2
-    count_down(timers[n][0])
-    timer_label.config(text=timers[n][1], fg=timers[n][2])
+        work_sessions = 2
+    count_down(timers[work_sessions][0])
+    timer_label.config(text=timers[work_sessions][1], fg=timers[work_sessions][2])
 
     # Adding check marks every work timer
-    if n == 0:
+    if work_sessions == 0:
         check += "✓"
         check_label.config(text=check)
 
