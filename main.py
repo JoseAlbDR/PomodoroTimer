@@ -6,8 +6,8 @@ RED = "#e7305b"
 GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
-WORK_MIN = 25
-SHORT_BREAK_MIN = 5
+WORK_MIN = 0.1
+SHORT_BREAK_MIN = 0.1
 LONG_BREAK_MIN = 20
 reps = 0
 check = ""
@@ -25,7 +25,7 @@ def start_timer():
     work_sec = WORK_MIN * 60
     short_break_sec = SHORT_BREAK_MIN * 60
     long_break_sec = LONG_BREAK_MIN * 60
-    reps += 1
+
     timers = {0: [work_sec, "WORK!", GREEN],
               1: [short_break_sec, "Break", PINK],
               2: [long_break_sec, "Long Break", RED]}
@@ -42,7 +42,7 @@ def start_timer():
         check += "✓"
         check_label.config(text=check)
 
-
+    reps += 1
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 
 def count_down(count):
