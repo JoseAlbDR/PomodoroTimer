@@ -8,7 +8,6 @@ The Pomodoro Timer is a simple Python application that helps you implement the P
 
 - Set customizable work and break durations in main.py
 - Visual countdown timer display
-- Sound alerts for session transitions
 - Track completed work sessions
 - Reset the timer
 
