@@ -47,7 +47,8 @@ def start_timer():
     if reps != 0 and reps % 8 == 0:
         work_sessions = 2
     count_down(timers[work_sessions][0])
-    timer_label.config(text=timers[work_sessions][1], fg=timers[work_sessions][2])
+    timer_label.config(text=timers[work_sessions]
+                       [1], fg=timers[work_sessions][2])
 
     # Adding check marks every work timer
     if work_sessions == 0 and reps != 8:
@@ -92,13 +93,15 @@ window.config(padx=100, pady=50, bg=YELLOW)
 
 # Canvas
 canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
-tomato_img = PhotoImage(file="tomato.png")
+tomato_img = PhotoImage(file="./tomato.png")
 canvas.create_image(100, 112, image=tomato_img)
-timer_text = canvas.create_text(100, 132, text="00:00", fill="white", font=(FONT_NAME, 32, "bold"))
+timer_text = canvas.create_text(
+    100, 132, text="00:00", fill="white", font=(FONT_NAME, 32, "bold"))
 canvas.grid(column=1, row=1)
 
 # Text labels
-timer_label = Label(text="Timer", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 28, "bold"))
+timer_label = Label(text="Timer", fg=GREEN, bg=YELLOW,
+                    font=(FONT_NAME, 28, "bold"))
 timer_label.grid(column=1, row=0)
 check_label = Label(text=check, fg=GREEN, bg=YELLOW)
 check_label.grid(column=1, row=3)
